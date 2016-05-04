@@ -8,10 +8,10 @@ class SMO:
         self.Y = Y                      # target labels, size: n
         self.C = C                      # parameter
         self.tol = 0.01                 # KKT violation tolerance
-        self.m = len(X)
-        self.n = len(X[0])
+        self.m = len(X)                 # sample size
+        self.n = len(X[0])              # feature size
         self.alpha = [0 for i in range(self.m)]         # lagrange multipliers
-        self.b = 0                                      # threshold
+        self.b = 0                                      # threshold b
         self.error_cache = [0 for i in range(self.m)]   # store error
 
         # initialize error cache
